@@ -1,20 +1,55 @@
-<div class="knowledge">
-    <?php
-    // переменные
-    $string = "Пример строки";
-    $number = 42;
-    $boolean = true;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мой сайт</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h2>Обо мне</h2>
+        <div class="info-block">
+            <h3>Подробности:</h3>
+            <?php
+            $surname = "Юмашев";
+            $name = "Тагир";
+            $age = 25;
+            $city = "Уфа";
+            ?>
+            <p><strong>Фамилия:</strong> <?php echo $surname; ?></p>
+            <p><strong>Имя:</strong> <?php echo $name; ?></p>
+            <p><strong>Возраст:</strong> <?php echo $age; ?></p>
+            <p><strong>Город:</strong> <?php echo $city; ?></p>
+        </div>
 
-    // вывод
-    echo "<p><strong>Строка:</strong> " . $string . "</p>";
-    echo "<p><strong>Число:</strong> " . $number . "</p>";
-    echo "<p><strong>Логическое значение:</strong> " . ($boolean ? 'true' : 'false') . "</p>";
-    echo "</p>";
+        <h2>Примеры работы с переменными</h2>
+        <div class="info-block">
+            <h3>Примеры переменных:</h3>
+            <?php
 
-    $sum = $number + 10;
-    $concatenation = $string . " дополнение";
+            $string = "Пример строки";
+            $number = 42;
+            $boolean = true;
+            $array = array("элемент 1", "элемент 2", "элемент 3");
 
-    echo "<p><strong>Результат сложения:</strong> " . $sum . "</p>";
-    echo "<p><strong>Результат конкатенации:</strong> " . $concatenation . "</p>";
-    ?>
+
+            echo "Строка: " . $string . "<br>";
+            echo "Число: " . $number . "<br>";
+            echo "Логическое значение: " . ($boolean ? 'true' : 'false') . "<br>";
+            echo "Массив: ";
+            print_r($array);
+            echo "<br>";
+
+
+            $sum = $number + 10;
+
+
+            echo "Результат сложения: " . $sum . "<br>";
+            ?>
+        </div>
+    </div>
+    <img src="image.jpg" alt="Изображение">
 </div>
+</body>
+</html>
+
